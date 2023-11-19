@@ -1,0 +1,11 @@
+dagster
+dagster-cloud
+duckdb
+pandas
+sqlescapy
+requests
+
+[dev]
+dagster-webserver
+pytest
+localstack

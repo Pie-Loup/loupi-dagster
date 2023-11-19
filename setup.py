@@ -5,7 +5,11 @@ setup(
     packages=find_packages(exclude=["loupi_dagster_tests"]),
     install_requires=[
         "dagster",
-        "dagster-cloud"
+        "dagster-cloud",
+        "duckdb",
+        "pandas",
+        "sqlescapy",
+        "requests"
     ],
-    extras_require={"dev": ["dagster-webserver", "pytest"]},
+    extras_require={"dev": ["dagster-webserver", "pytest", "localstack"]},
 )

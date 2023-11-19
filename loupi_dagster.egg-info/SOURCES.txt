@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+loupi_dagster/__init__.py
+loupi_dagster/assets.py
+loupi_dagster/duckpond.py
+loupi_dagster.egg-info/PKG-INFO
+loupi_dagster.egg-info/SOURCES.txt
+loupi_dagster.egg-info/dependency_links.txt
+loupi_dagster.egg-info/requires.txt
+loupi_dagster.egg-info/top_level.txt
