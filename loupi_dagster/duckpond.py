@@ -1,6 +1,7 @@
 from duckdb import connect
 from dagster import IOManager
 import pandas as pd
+from sqlescapy import sqlescape
 from string import Template
 from typing import Mapping
 

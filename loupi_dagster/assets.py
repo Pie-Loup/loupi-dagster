@@ -1,6 +1,6 @@
 from dagster import asset
 from loupi_dagster.duckpond import SQL
-
+from datetime import datetime
 import os
 import pandas as pd
 import requests
@@ -30,11 +30,19 @@ def time_series_last() -> SQL:
 
 @asset
 def time_series_complete(time_series_last) -> SQL:
+    dt_now = str(datetime.now())
+    print(dt_now)
     return SQL(
             """
               select 
                 *
+                , $dt_now as synced_at
               from $time_series_last
+              union all
+              select 
+                *
+              from time_series_complete
             """,
             time_series_last=time_series_last,
+            dt_now=dt_now,
         )
