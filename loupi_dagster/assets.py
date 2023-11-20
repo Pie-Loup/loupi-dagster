@@ -1,16 +1,16 @@
-from dagster import asset
+from dagster import asset, op
 from loupi_dagster.duckpond import SQL
 from datetime import datetime
 import os
 import pandas as pd
 import requests
 
-
+@op
 def get_data_vantage():
     
     url = "https://www.alphavantage.co/query"
     querystring = {
-        "apikey": os.environ["VANTAGE_APIKEY"]
+        "apikey": os.environ.get("VANTAGE_APIKEY")
         , "interval":"5min"
         , "function":"TIME_SERIES_INTRADAY"
         , "symbol":"MSFT"

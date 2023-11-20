@@ -1,2 +1,2 @@
 .env
-loupi_dagster/__pycache__/
+*/__pycache__/
